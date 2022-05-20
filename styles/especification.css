@@ -14,18 +14,3 @@ header {
 .header-icons {
     gap: 10px;
 }
-
-main {
-    padding: 0 5% 2% 5%;
-}
-
-.card {
-    width: 20%;
-    height: 500px;
-    border: none;
-
-}
-
-.card button{
-    justify-self: end;
-}
