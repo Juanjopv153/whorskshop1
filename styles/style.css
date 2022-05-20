@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 2% 5% 5% 5%;
+}
+
+.header-buttons {
+    gap: 10px;
+}
+
+.header-icons {
+    gap: 10px;
+}
+
+main {
+    padding: 0 5% 2% 5%;
+}
+
+.card {
+    width: 20%;
+    border: none;
+
+}
