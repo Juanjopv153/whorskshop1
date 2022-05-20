@@ -7,10 +7,29 @@ header {
     padding: 2% 5% 5% 5%;
 }
 
+main{
+    padding: 2% 5% 5% 5%;
+}
+
 .header-buttons {
     gap: 10px;
 }
 
 .header-icons {
     gap: 10px;
+}
+
+.imagesSections{
+    gap: 20px;
+}
+.imagesSections img{
+    width: 50px;
+}
+
+.imagesDemostration{
+    gap: 20px;
+}
+
+.imagesDemostration img{
+    width: 500px;
 }

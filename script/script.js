@@ -31,3 +31,5 @@ window.addEventListener('click', ({target})=>{
             window.location = "../pages/especification.html"
         }
 })
+
+export default {url}
