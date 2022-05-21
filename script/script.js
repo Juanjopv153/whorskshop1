@@ -4,12 +4,14 @@ const url = "https://fresh-prince.herokuapp.com/products/"
 const template = document.getElementById('cardsTemplate').content
 const container = document.getElementById('CardsContainer')
 const frag = document.createDocumentFragment()
+let GlobalData
 
 
 
 window.addEventListener('DOMContentLoaded', async()=>{
     let res = await fetch(url)
     const data = await res.json()
+    GlobalData = data
     getData(data)
 })
 
