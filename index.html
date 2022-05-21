@@ -1,51 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Principe Fresco</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
 
-<body>
+  <body>
     <header class="d-flex justify-content-between align-items-start">
-        <h2>Principe Fresco</h2>
-        <div class="d-flex justify-content-center header-buttons">
-            <span>SHOP</span>
-            <span>COLLECTIONS</span>
-        </div>
-        <div class="d-flex justify-content-center header-icons">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                <path fill-rule="evenodd"
-                    d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z">
-                </path>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                <path fill-rule="evenodd"
-                    d="M6.75 0A1.75 1.75 0 005 1.75V3H1.75A1.75 1.75 0 000 4.75v8.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H11V1.75A1.75 1.75 0 009.25 0h-2.5zM9.5 3V1.75a.25.25 0 00-.25-.25h-2.5a.25.25 0 00-.25.25V3h3zM5 4.5H1.75a.25.25 0 00-.25.25V6a2 2 0 002 2h9a2 2 0 002-2V4.75a.25.25 0 00-.25-.25H5zm-1.5 5a3.484 3.484 0 01-2-.627v4.377c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V8.873a3.484 3.484 0 01-2 .627h-9z">
-                </path>
-            </svg>
-        </div>
+      <h2>Principe Fresco</h2>
+      <div class="d-flex justify-content-center header-buttons">
+        <span>SHOP</span>
+        <span>COLLECTIONS</span>
+      </div>
+      <div class="d-flex justify-content-center header-icons">
+        <svg
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+          width="16"
+          height="16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"
+          ></path>
+        </svg>
+      </div>
     </header>
     <main class="">
+      <div id="CardsContainer" class="d-flex justify-content-between"></div>
 
-        <div id="CardsContainer" class="d-flex justify-content-between">
+      <template id="cardsTemplate">
+        <div class="card">
+          <img src="./images/imagen1-2.png" alt="" />
+          <h2>Sexo</h2>
+          <span>Price: sexo</span>
+          <button type="button" class="btn btn-outline-dark" id="boton">
+            More Info
+          </button>
 
-        </div>
-        <template id="cardsTemplate">
-            <div class="card">
-                <img src="./images/imagen1-2.png" alt="">
-                <h2></h2>
-                <span>Price:</span>
-                <button type="button" class="btn btn-outline-dark importantButon" id="boton">More Info</button>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary "
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Administrar
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Eliminar Producto
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary gestionar"
+                    data-bs-dismiss="modal"
+                  >
+                    Borrar
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Cancelar
+                  </button>
+                </div>
+              </div>
             </div>
-        </template>
+          </div>
+        </div>
+      </template>
     </main>
-</body>
-<!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
-<script src="./script/script.js" type="module"></script>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./script/script.js" type="module"></script>
 </html>
