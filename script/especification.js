@@ -30,7 +30,7 @@ let getData = (data)=>{
             
         })
         template.querySelector('h1').textContent = name;
-        template.querySelector('span').textContent = `Price: $${price}.00`;
+        template.querySelector('span').textContent = `$${price}.00`;
         container.appendChild(template)
 
 }

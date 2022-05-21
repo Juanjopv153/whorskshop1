@@ -27,9 +27,23 @@ main{
 }
 
 .imagesDemostration{
+    padding: 0 0 0 0;
     gap: 20px;
+    height: 500px;
+    overflow-y: scroll;
 }
 
 .imagesDemostration img{
     width: 500px;
+}
+
+.leftSection{
+    width: 35%;
+}
+
+.size{
+    padding: 2.5% 4% 2.5% 4%;
+    border-radius: 100%;
+    background-color: transparent;
+    border: none;
 }
