@@ -1,4 +1,5 @@
-let url = "https://fresh-prince.herokuapp.com/products"
+import { Data } from "../modules/url.js"
+
 let localData = 0
 let container = document.getElementById('container')
 let template = document.getElementById('templateEspecification').content
@@ -7,8 +8,7 @@ window.addEventListener('DOMContentLoaded', async()=>{
     if(localStorage.getItem('section')){
         localData = JSON.parse(localStorage.getItem('section'))
     }
-    let res = await fetch(url)
-    let data = await res.json()
+    let data = await Data()
     let dataSection = data.find(({id})=>{
         return id == localData
     })

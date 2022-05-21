@@ -29,7 +29,7 @@ main{
 .imagesDemostration{
     padding: 0 0 0 0;
     gap: 20px;
-    height: 500px;
+    height: 750px;
     overflow-y: scroll;
 }
 
