@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principe Fresco</title>
+    <title>Fresh Prince</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/especification.css">
@@ -13,18 +13,18 @@
 
 <body>
     <header class="d-flex justify-content-between align-items-start">
-        <h2 id="logo">Principe Fresco</h2>
+        <h2 id="logo">Fresh Prince</h2>
         <div class="d-flex justify-content-center header-buttons">
-            <span>SHOP</span>
+            <span id="shop">SHOP</span>
             <span>COLLECTIONS</span>
         </div>
         <div class="d-flex justify-content-center header-icons">
-            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                 <path fill-rule="evenodd"
                     d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z">
                 </path>
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+            <svg id="wallet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                 <path fill-rule="evenodd"
                     d="M6.75 0A1.75 1.75 0 005 1.75V3H1.75A1.75 1.75 0 000 4.75v8.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H11V1.75A1.75 1.75 0 009.25 0h-2.5zM9.5 3V1.75a.25.25 0 00-.25-.25h-2.5a.25.25 0 00-.25.25V3h3zM5 4.5H1.75a.25.25 0 00-.25.25V6a2 2 0 002 2h9a2 2 0 002-2V4.75a.25.25 0 00-.25-.25H5zm-1.5 5a3.484 3.484 0 01-2-.627v4.377c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V8.873a3.484 3.484 0 01-2 .627h-9z">
                 </path>
@@ -33,11 +33,11 @@
     </header>
     <main>
         <div id='container' class="d-flex justify-content-around align-items-start">
-            
+
         </div>
         <template id="templateEspecification">
-            <div class="d-flex flex-column align-items-start justify-content-center imagesSections">
-                
+            <div class="d-flex flex-column align-items-start justify-content-start imagesSections">
+
             </div>
             <div class="d-flex flex-column align-items-start justify-content-start imagesDemostration">
 
@@ -47,14 +47,14 @@
                 <span>price</span>
                 <span>size</span>
                 <div>
-                    <button class="size">S</button>
-                    <button class="size">M</button>
-                    <button class="size">L</button>
-                    <button class="size">XL</button>
-                    <button class="size">XXL</button>
+                    <button class="size" id="S" onclick="Sizes(id)">S</button>
+                    <button class="size" id="M" onclick="Sizes(e.target.id)">M</button>
+                    <button class="size" id="L" onclick="Sizes(e.target.id)">L</button>
+                    <button class="size" id="XL" onclick="Sizes(e.target.id)">XL</button>
+                    <button class="size" id="XXL" onclick="Sizes(e.target.id)">XXL</button>
                 </div>
                 <p>Let them know you’re 90s royalty with this official The Fresh Prince crown pattern sweater.
-                    Throw vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo 
+                    Throw vintage vibes that Uncle Phil would approve of. Featuring woven The Fresh Prince logo
                     on chest. Navy crown print crew neck sweatshirt with white ribbed collar and waist band.
                     Cotton/Poly blend.</p>
             </div>
@@ -62,4 +62,5 @@
     </main>
 </body>
 <script src="../script/especification.js" type="module"></script>
+
 </html>
