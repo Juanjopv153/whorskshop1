@@ -4,16 +4,17 @@ import {Data} from "../modules/url.js"
 const template = document.getElementById('cardsTemplate').content
 const container = document.getElementById('CardsContainer')
 const frag = document.createDocumentFragment()
-
+const wallet = document.getElementById("wallet")
+let url = "https://fresh-prince.herokuapp.com/products/"
 
 window.addEventListener('DOMContentLoaded', async()=>{
-    let data = await Data()
+    let data = await Data(url)
     getData(data)
 })
 
 let getData = (data)=>{
-    data.forEach(({price, name, images, id}) => {
-        template.querySelector('img').setAttribute('src', images[0])
+    data.forEach(({price, name, imagenP, id}) => {
+        template.querySelector('img').setAttribute('src', imagenP)
         template.querySelector('h2').textContent = name
         template.querySelector('span').textContent = `Price: $${price}.00`
         template.querySelector(".gestionar").id = id
@@ -36,6 +37,10 @@ document.addEventListener("click", ({target})=>{
         localStorage.setItem('section', target.id)
         window.location = '../pages/especification.html'
     }
+})
+
+wallet.addEventListener("click", ()=>{
+    window.location.href = './pages/crud.html'
 })
 
 

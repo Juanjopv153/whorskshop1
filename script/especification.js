@@ -1,5 +1,9 @@
 import { Data } from "../modules/url.js"
 
+const logo = document.getElementById("logo")
+console.log(logo)
+
+const url = "https://fresh-prince.herokuapp.com/products/"
 let localData = 0
 let container = document.getElementById('container')
 let template = document.getElementById('templateEspecification').content
@@ -8,7 +12,7 @@ window.addEventListener('DOMContentLoaded', async()=>{
     if(localStorage.getItem('section')){
         localData = JSON.parse(localStorage.getItem('section'))
     }
-    let data = await Data()
+    let data = await Data(url)
     let dataSection = data.find(({id})=>{
         return id == localData
     })
@@ -34,3 +38,7 @@ let getData = (data)=>{
         container.appendChild(template)
 
 }
+
+logo.addEventListener("click",()=>{
+    window.location.href = '../index.html'
+})

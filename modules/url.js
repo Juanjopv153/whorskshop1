@@ -1,5 +1,6 @@
-export async function Data (){
-    let url = "https://fresh-prince.herokuapp.com/products/"
+
+export async function Data (url){
+    
     let res = await fetch(url)
     let data = await res.json()
     return data
