@@ -5,10 +5,9 @@ const template = document.getElementById('cardsTemplate').content
 const container = document.getElementById('CardsContainer')
 const frag = document.createDocumentFragment()
 const wallet = document.getElementById("wallet")
-let url = "https://fresh-prince.herokuapp.com/products/"
 
 window.addEventListener('DOMContentLoaded', async()=>{
-    let data = await Data(url)
+    let data = await Data()
     getData(data)
 })
 

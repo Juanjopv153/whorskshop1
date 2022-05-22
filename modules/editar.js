@@ -1,4 +1,6 @@
-export const Editar = async (url,object)=>{
+import {url} from './url.js'
+
+export const Editar = async (object)=>{
 
     try {
       

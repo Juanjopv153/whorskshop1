@@ -1,4 +1,6 @@
- export async function Delete (url, id) {
-     
-     await  axios.delete(url+id)
+import { url } from './url.js'
+
+export async function Delete(id) {
+
+    await axios.delete(url + id)
 }

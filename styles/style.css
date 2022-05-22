@@ -29,3 +29,7 @@ main {
 .card button{
     justify-self: end;
 }
+
+#wallet{
+    cursor: pointer;
+}
