@@ -1,12 +1,14 @@
 import { Data } from "../modules/url.js"
 
 const logo = document.getElementById("logo")
-
 let localData = 0
 let container = document.getElementById('container')
-let template = document.getElementById('templateEspecification').content
+let template = document.getElementById('templateEspecification').content;
+const comprar = document.getElementById('comprar')
 const wallet = document.getElementById("wallet")
 const shop = document.getElementById("shop")
+
+console.log(comprar);
 
 window.addEventListener('DOMContentLoaded', async () => {
     if (localStorage.getItem('section')) {
@@ -60,14 +62,14 @@ logo.addEventListener("click", () => {
     window.location.href = '../index.html'
 })
 
-let Sizes = (size) => {
-    console.log(size);
-}
-
 wallet.addEventListener("click", () => {
     window.location.href = './crud.html'
 })
 
 shop.addEventListener("click", () => {
     window.location = '../index.html'
+})
+
+comprar.addEventListener('click', () => {
+    alert("A")
 })

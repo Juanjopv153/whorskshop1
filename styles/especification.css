@@ -59,3 +59,24 @@ main{
 #shop{
     cursor: pointer;
 }
+
+form{
+    padding: 0% 5% 2% 5%;
+}
+
+.btn-light{
+    border: black solid 2px;
+}
+
+.btn-dark{
+    transition: all 0.5s;
+}
+.btn-dark:hover{
+  
+    background-color: transparent;
+    color: black;
+}
+
+.leftSection{
+    gap: 10px;
+}

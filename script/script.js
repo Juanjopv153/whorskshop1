@@ -5,6 +5,7 @@ const template = document.getElementById('cardsTemplate').content
 const container = document.getElementById('CardsContainer')
 const frag = document.createDocumentFragment()
 const wallet = document.getElementById("wallet")
+let id = 0
 
 
 window.addEventListener('DOMContentLoaded', async () => {
@@ -30,9 +31,14 @@ let getData = (data) => {
 }
 
 document.addEventListener("click", async ({ target }) => {
+    
 
     if (target.classList.contains("gestionar")) {
-        Delete(target.id)
+        id = target.id
+    }
+
+    if (target.classList.contains("delete")){
+        await Delete(id)
         let data = await Data()
         getData(data)
     }
